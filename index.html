@@ -41,6 +41,9 @@
       width: var(--w);
       height: var(--h);
       min-width: 80px;
+      max-width: fit-content;
+      padding-left: 2px;
+      margin-top: 3px;
     }
 
     .tarjeta {
@@ -81,19 +84,20 @@
       border-radius: 50px;
       border: white 5px solid;
     }
+
+    .areaTarjeta {
+      float: left;
+    }
+
+    #tablero {
+      /* max-width: 80vh;
+      max-height: 80vh;*/
+    }
   </style>
   <body>
     <section id="tablero"></section>
-    <div class="areaTarjeta">
-      <div class="tarjeta">
-        <div class="cara Trasera"><i class="fa-solid fa-dice-d6"></i></div>
-        <div class="cara Superior">
-          <i class="fa-solid fa-circle-question"></i>
-        </div>
-      </div>
-    </div>
 
-    <button class="nuevoJuego">Nuevo Juego</button>
+    <button class="nuevoJuego" onclick="generarTablero()">Nuevo Juego</button>
     <script src="app.js"></script>
   </body>
 </html>
