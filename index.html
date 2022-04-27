@@ -26,8 +26,7 @@
 
     .areaTarjeta,
     .tarjeta,
-    .caraTrasera,
-    .caraSuperior {
+    .cara {
       width: var(--w);
       height: var(--h);
       min-width: 80px;
@@ -42,12 +41,19 @@
       transform: rotateY(180deg);
     }
 
-    .caraTrasera {
-      background-color: lightcyan;
+    .cara {
       position: absolute;
+      backface-visibility: hidden;
     }
 
-    .caraSuperior {
+    .Trasera {
+      background-color: lightcyan;
+      position: absolute;
+
+      transform: rotateY(180deg);
+    }
+
+    .Superior {
       background-color: orange;
       position: absolute;
     }
@@ -56,8 +62,8 @@
     <section id="tablero"></section>
     <div class="areaTarjeta">
       <div class="tarjeta">
-        <div class="caraTrasera"></div>
-        <div class="caraSuperior"></div>
+        <div class="cara Trasera"></div>
+        <div class="cara Superior"></div>
       </div>
     </div>
 
