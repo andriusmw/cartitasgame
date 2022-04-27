@@ -7,7 +7,51 @@
     <title>Cartitas Game</title>
     <link rel="stylesheet/css" href="styles.css" />
   </head>
-  <style></style>
+  <style>
+    :root {
+      --w: calc(70vw / 6);
+      --h: calc(70vw / 4);
+    }
+
+    * {
+      transition: all 0.5s;
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      -webkit-perspective: 1000;
+      background-color: powderblue;
+    }
+
+    .areaTarjeta,
+    .tarjeta,
+    .caraTrasera,
+    .caraSuperior {
+      width: var(--w);
+      height: var(--h);
+      min-width: 80px;
+    }
+
+    .tarjeta {
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    .areaTarjeta:hover .tarjeta {
+      transform: rotateY(180deg);
+    }
+
+    .caraTrasera {
+      background-color: lightcyan;
+      position: absolute;
+    }
+
+    .caraSuperior {
+      background-color: orange;
+      position: absolute;
+    }
+  </style>
   <body>
     <section id="tablero"></section>
     <div class="areaTarjeta">
